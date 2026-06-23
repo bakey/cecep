@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+
+# 大数据 (统一约定, 各子目录也遵守)
+DataReal/
+*.jsonl.gz
+*.parquet
+kg/embed/chroma_store/
+kg/embed/cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 临时
+*.tmp
+*.bak
+*.log

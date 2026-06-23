@@ -1,0 +1,1202 @@
+{
+  "timestamp": "2026-06-03T23:09:05.707400",
+  "mode": "graph+bm25_recall_only",
+  "total": 100,
+  "recall_pass_rate": 0.58,
+  "avg_recall": 0.407,
+  "by_type": {
+    "law_article": {
+      "total": 23,
+      "recall_pass_rate": 0.609,
+      "avg_recall": 0.493
+    },
+    "standard_limit": {
+      "total": 21,
+      "recall_pass_rate": 1.0,
+      "avg_recall": 0.5
+    },
+    "industry_compliance": {
+      "total": 21,
+      "recall_pass_rate": 0.714,
+      "avg_recall": 0.46
+    },
+    "case_recommend": {
+      "total": 20,
+      "recall_pass_rate": 0.25,
+      "avg_recall": 0.3
+    },
+    "process_sop": {
+      "total": 15,
+      "recall_pass_rate": 0.2,
+      "avg_recall": 0.211
+    }
+  },
+  "details": [
+    {
+      "id": "qa-001",
+      "type": "law_article",
+      "question": "中华人民共和国水污染防治法的颁布机构是哪个？",
+      "recall": 1.0,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-002",
+      "type": "law_article",
+      "question": "大气污染防治法的立法目的是什么？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-003",
+      "type": "law_article",
+      "question": "危险废物经营许可证的申请条件是什么？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-004",
+      "type": "law_article",
+      "question": "超标排放大气污染物的处罚措施有哪些？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-005",
+      "type": "law_article",
+      "question": "未批先建的环境影响评价法律责任是什么？",
+      "recall": 0.667,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-006",
+      "type": "standard_limit",
+      "question": "GB 3095-2012 环境空气质量标准中 PM2.5 的年均浓度限值是多少？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-007",
+      "type": "standard_limit",
+      "question": "地表水环境质量标准 GB 3838-2002 中 COD 的标准限值是多少？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-008",
+      "type": "standard_limit",
+      "question": "污水综合排放标准 GB 8978-1996 中氨氮的最高允许排放浓度？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-009",
+      "type": "standard_limit",
+      "question": "工业炉窑大气污染物排放标准是什么？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-010",
+      "type": "standard_limit",
+      "question": "危险废物焚烧污染控制标准的二噁英排放限值是多少？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-011",
+      "type": "industry_compliance",
+      "question": "钢铁工业适用的主要排放标准是什么？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-012",
+      "type": "industry_compliance",
+      "question": "火电厂大气污染物排放适用什么标准？",
+      "recall": 0.667,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-013",
+      "type": "industry_compliance",
+      "question": "化工行业废水排放执行什么标准？",
+      "recall": 0.667,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-014",
+      "type": "industry_compliance",
+      "question": "水泥行业大气污染物排放限值标准？",
+      "recall": 0.667,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-015",
+      "type": "industry_compliance",
+      "question": "印染行业适用的国家排放标准？",
+      "recall": 0.667,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-016",
+      "type": "case_recommend",
+      "question": "类似未批先建被处罚的案例有哪些？",
+      "recall": 0.667,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-017",
+      "type": "case_recommend",
+      "question": "类似监测数据造假的处罚案例？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-018",
+      "type": "case_recommend",
+      "question": "非法收集危险废物的典型案例？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-019",
+      "type": "case_recommend",
+      "question": "夜间偷排废水被查处的案例？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-020",
+      "type": "case_recommend",
+      "question": "污水处理厂出水超标案例？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-021",
+      "type": "law_article",
+      "question": "中华人民共和国环境保护法的立法目的是什么？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-022",
+      "type": "law_article",
+      "question": "建设项目环境影响评价的审批程序是什么？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25"
+      ]
+    },
+    {
+      "id": "qa-023",
+      "type": "law_article",
+      "question": "排污许可证的申请与核发规定是什么？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-024",
+      "type": "law_article",
+      "question": "突发环境事件应急处置的法律责任？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-025",
+      "type": "law_article",
+      "question": "按日连续处罚的适用条件是什么？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-026",
+      "type": "standard_limit",
+      "question": "锅炉大气污染物排放标准 GB 13271 的颗粒物限值？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-027",
+      "type": "standard_limit",
+      "question": "恶臭污染物排放标准 GB 14554 的氨排放限值？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-028",
+      "type": "standard_limit",
+      "question": "饮食业油烟排放标准是什么？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-029",
+      "type": "standard_limit",
+      "question": "医疗废物焚烧污染控制标准的烟气黑度限值？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-030",
+      "type": "standard_limit",
+      "question": "生活垃圾焚烧污染控制标准的颗粒物排放限值？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-031",
+      "type": "industry_compliance",
+      "question": "造纸工业水污染物排放标准？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-032",
+      "type": "industry_compliance",
+      "question": "制药工业大气污染物排放标准？",
+      "recall": 0.667,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-033",
+      "type": "industry_compliance",
+      "question": "炼焦化学工业适用的排放标准？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-034",
+      "type": "industry_compliance",
+      "question": "电池工业污染物排放标准？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-035",
+      "type": "industry_compliance",
+      "question": "电镀污染物排放标准的重金属限值？",
+      "recall": 0.667,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-036",
+      "type": "case_recommend",
+      "question": "VOCs 排放超标被处罚的案例？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-037",
+      "type": "case_recommend",
+      "question": "污水处理厂污泥违规处置案例？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-038",
+      "type": "case_recommend",
+      "question": "伪造在线监测数据被追究刑事责任案例？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-039",
+      "type": "case_recommend",
+      "question": "未取得排污许可证排放污染物的案例？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-040",
+      "type": "case_recommend",
+      "question": "跨省倾倒危险废物被处罚的案例？",
+      "recall": 0.667,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-041",
+      "type": "process_sop",
+      "question": "污染源监察的核查流程是什么？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25"
+      ]
+    },
+    {
+      "id": "qa-042",
+      "type": "process_sop",
+      "question": "环境违法案件立案调查的标准流程？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-043",
+      "type": "process_sop",
+      "question": "突发环境事件分级响应程序？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25"
+      ]
+    },
+    {
+      "id": "qa-044",
+      "type": "process_sop",
+      "question": "环保督察整改验收流程？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25"
+      ]
+    },
+    {
+      "id": "qa-045",
+      "type": "process_sop",
+      "question": "生态环境损害赔偿磋商程序？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25"
+      ]
+    },
+    {
+      "id": "qa-046",
+      "type": "law_article",
+      "question": "中华人民共和国固体废物污染环境防治法的颁布机构？",
+      "recall": 1.0,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-047",
+      "type": "law_article",
+      "question": "噪声污染防治法的适用范围是什么？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-048",
+      "type": "law_article",
+      "question": "土壤污染防治法规定的污染责任主体？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-049",
+      "type": "standard_limit",
+      "question": "环境空气质量指数 AQI 计算的污染物？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-050",
+      "type": "industry_compliance",
+      "question": "畜禽养殖业适用的排放标准？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-051",
+      "type": "law_article",
+      "question": "海洋环境保护法的适用范围包括哪些？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-052",
+      "type": "law_article",
+      "question": "放射性污染防治法的监督管理部门？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-053",
+      "type": "law_article",
+      "question": "建设项目竣工环保验收的法律依据？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-054",
+      "type": "law_article",
+      "question": "逃避监管方式排放污染物的法律后果？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-055",
+      "type": "law_article",
+      "question": "企业事业单位环境信息公开的法律要求？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-056",
+      "type": "law_article",
+      "question": "环境公益诉讼的起诉条件是什么？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-057",
+      "type": "law_article",
+      "question": "排污许可管理条例的实施时间？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-058",
+      "type": "law_article",
+      "question": "清洁生产促进法的核心目的是什么？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-059",
+      "type": "law_article",
+      "question": "环境影响评价法中公众参与的规定？",
+      "recall": 1.0,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-060",
+      "type": "law_article",
+      "question": "污染环境罪的入罪标准是什么？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-061",
+      "type": "standard_limit",
+      "question": "声环境质量标准 GB 3096 的各类声环境功能区？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-062",
+      "type": "standard_limit",
+      "question": "地下水质量标准 GB/T 14848 的质量分类？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-063",
+      "type": "standard_limit",
+      "question": "铅锌工业污染物排放标准的铅排放限值？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-064",
+      "type": "standard_limit",
+      "question": "铝工业污染物排放标准的氟化物限值？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-065",
+      "type": "standard_limit",
+      "question": "挥发性有机物无组织排放控制标准的监测要求？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-066",
+      "type": "standard_limit",
+      "question": "煤炭工业污染物排放标准的主要控制指标？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-067",
+      "type": "standard_limit",
+      "question": "陶瓷工业污染物排放标准的颗粒物限值？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-068",
+      "type": "standard_limit",
+      "question": "土壤环境质量 建设用地土壤污染风险管控标准的标准号？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-069",
+      "type": "standard_limit",
+      "question": "合成树脂工业污染物排放标准的特征污染物？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-070",
+      "type": "standard_limit",
+      "question": "石油炼制工业污染物排放标准的废水控制项目？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-071",
+      "type": "industry_compliance",
+      "question": "有色金属冶炼行业适用的排放标准？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-072",
+      "type": "industry_compliance",
+      "question": "石油化学工业适用的排放标准？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-073",
+      "type": "industry_compliance",
+      "question": "橡胶制品工业污染物排放标准？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-074",
+      "type": "industry_compliance",
+      "question": "农药制造工业污染物排放标准？",
+      "recall": 0.667,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-075",
+      "type": "industry_compliance",
+      "question": "无机化学工业污染物排放标准的重金属限值？",
+      "recall": 0.667,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-076",
+      "type": "industry_compliance",
+      "question": "制革及毛皮加工工业水污染物排放标准？",
+      "recall": 0.667,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-077",
+      "type": "industry_compliance",
+      "question": "玻璃工业大气污染物排放标准？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-078",
+      "type": "industry_compliance",
+      "question": "砖瓦工业大气污染物排放标准？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-079",
+      "type": "industry_compliance",
+      "question": "铁矿采选工业污染物排放标准？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-080",
+      "type": "industry_compliance",
+      "question": "钒工业污染物排放标准的特征污染物？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-081",
+      "type": "case_recommend",
+      "question": "超标排放 SO2 被按日连续处罚的案例？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-082",
+      "type": "case_recommend",
+      "question": "非法排放重金属废水被查处的案例？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-083",
+      "type": "case_recommend",
+      "question": "非法排放倾倒处置危险废物涉嫌犯罪的案例？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-084",
+      "type": "case_recommend",
+      "question": "企业拒不执行停产整治被查封扣押的案例？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-085",
+      "type": "case_recommend",
+      "question": "环评造假被追究法律责任的案例？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-086",
+      "type": "case_recommend",
+      "question": "工地夜间施工噪声超标被投诉处罚的案例？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-087",
+      "type": "case_recommend",
+      "question": "露天焚烧秸秆被处罚的案例？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-088",
+      "type": "case_recommend",
+      "question": "饮用水水源保护区违规建设的案例？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-089",
+      "type": "case_recommend",
+      "question": "超标排放 NOx 被行政处罚的案例？",
+      "recall": 0.667,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-090",
+      "type": "case_recommend",
+      "question": "通过渗坑排放有毒物质被追究污染环境罪的案例？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-091",
+      "type": "process_sop",
+      "question": "企业如何申请排污许可证？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25"
+      ]
+    },
+    {
+      "id": "qa-092",
+      "type": "process_sop",
+      "question": "环境影响评价报告书的编制要求？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-093",
+      "type": "process_sop",
+      "question": "环境行政处罚听证程序？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-094",
+      "type": "process_sop",
+      "question": "污染地块风险评估的工作流程？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25"
+      ]
+    },
+    {
+      "id": "qa-095",
+      "type": "process_sop",
+      "question": "排污单位自行监测的技术要求？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-096",
+      "type": "process_sop",
+      "question": "环境污染责任保险的投保流程？",
+      "recall": 0.5,
+      "pass": true,
+      "n_hits": 5,
+      "sources": [
+        "bm25"
+      ]
+    },
+    {
+      "id": "qa-097",
+      "type": "process_sop",
+      "question": "危险废物转移联单的管理规定？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-098",
+      "type": "process_sop",
+      "question": "企业突发环境事件应急预案的备案要求？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25",
+        "graph"
+      ]
+    },
+    {
+      "id": "qa-099",
+      "type": "process_sop",
+      "question": "生态环境执法现场检查的程序？",
+      "recall": 0.0,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25"
+      ]
+    },
+    {
+      "id": "qa-100",
+      "type": "process_sop",
+      "question": "环境损害鉴定评估的工作步骤？",
+      "recall": 0.333,
+      "pass": false,
+      "n_hits": 5,
+      "sources": [
+        "bm25"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# 大文件 (不推 Git)
+DataReal/
+kg/embed/chroma_store/
+kg/embed/cache/
+kg/logs/chunks.jsonl
+kg/logs/bg_embed*.log
+kg/logs/bg_embed*.out
+kg/logs/bg_embed*.err
+kg/logs/bg_extract*.log
+kg/logs/bg_extract*.out
+kg/logs/bg_extract*.err
+kg/logs/*.log
+kg/logs/skeleton_*.log
+kg/visualize/output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 临时
+*.tmp
+*.bak

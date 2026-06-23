@@ -1,0 +1,29 @@
+# 中节能 zjn RAG+KG 依赖
+# Python 3.11
+# 用法: pip install -r requirements.txt
+
+# LLM (智谱)
+zai-sdk>=0.2.0
+
+# Embedding (本地回退, 当前主用 API 模式不强制装)
+sentence-transformers>=2.0.0
+
+# 向量库
+chromadb>=0.4.0
+
+# 图谱
+networkx>=3.0
+
+# 检索
+rank_bm25>=0.2.2
+jieba>=0.42.1
+
+# 数据处理
+pyyaml>=6.0
+tiktoken>=0.4.0
+
+# Neo4j (可选, 切到生产时再装)
+neo4j>=5.0
+
+# 可视化
+pyvis>=0.3.0

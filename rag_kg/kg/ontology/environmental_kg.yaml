@@ -1,0 +1,395 @@
+# =============================================================================
+# 环保执法领域知识图谱本体 (Environmental Enforcement KG Ontology)
+# 适配: 中节能大数据"减污降碳"大模型项目
+# 设计原则:
+#   - 静态层 (Static)  /  动态层 (Dynamic)  /  元数据层 (Meta)  三层
+#   - 实体类型 ≥ 16 类，关系类型 ≥ 22 类，显著多于现有 phase1 的 9 实体 / 3 关系
+#   - 字段精简，便于 LLM 抽取 + 人工 review
+#   - 兼顾法规检索 / 问数 / 案件推荐 / 污染溯源 / 报告造假分析
+# =============================================================================
+
+version: "1.0.0"
+project: "ChinaEnergyConservation-KG"
+domain: "environmental_enforcement"
+last_updated: "2026-06-01"
+
+# -----------------------------------------------------------------------------
+# 节点类型 (Node Labels)
+# -----------------------------------------------------------------------------
+node_types:
+
+  # ===== 静态层 (法规 / 标准 / 条款) =====
+  Law:
+    desc: "国家法律 (如《环境保护法》《大气污染防治法》)"
+    properties:
+      - name: "law_id"          # 唯一 ID, 如 "law_环境保护法_2014"
+      - name: "full_name"       # 法规全称
+      - name: "short_name"      # 简称
+      - name: "effective_date"  # 生效日期
+      - name: "issuing_body"    # 颁布机关
+      - name: "level"           # 国家/地方
+      - name: "status"          # 现行/废止/已修订
+      - name: "superseded_by"   # 被哪个法规替代
+      - name: "summary"         # 一句话摘要 (LLM 生成)
+    examples: ["中华人民共和国大气污染防治法", "中华人民共和国固体废物污染环境防治法"]
+
+  Regulation:
+    desc: "地方性法规 / 行政法规 / 政府规章"
+    properties:
+      - name: "reg_id"
+      - name: "full_name"
+      - name: "region"
+      - name: "level"
+      - name: "effective_date"
+      - name: "issuing_body"
+      - name: "status"
+      - name: "summary"
+    examples: ["白洋淀生态环境治理和保护条例", "河北省排污许可管理办法"]
+
+  Standard:
+    desc: "国家/行业/地方标准 (GB/HJ/DB 等)"
+    properties:
+      - name: "std_id"          # "GB 3095-2012"
+      - name: "full_name"
+      - name: "std_type"        # 国家标准/行业标准/地方标准
+      - name: "pollutants"      # 涉及的污染物 (数组)
+      - name: "industries"      # 涉及行业
+      - name: "limit_values"    # 排放限值 (JSON: {pollutant: {value, unit, scenario}})
+      - name: "effective_date"
+      - name: "status"          # 现行/废止
+      - name: "supersedes"      # 替代哪些旧标准
+      - name: "superseded_by"   # 被哪个新标准替代
+    examples: ["GB 3095-2012 环境空气质量标准", "HJ 663-2013 环境噪声监测技术规范"]
+
+  Article:
+    desc: "法规/标准的具体条款 (核心细粒度节点)"
+    properties:
+      - name: "article_id"      # 唯一: "law_环境保护法_第X条"
+      - name: "parent_doc"      # 所属法规/标准
+      - name: "article_no"      # 条号
+      - name: "chapter"         # 章节
+      - name: "content"         # 条款全文
+      - name: "content_hash"    # 内容哈希 (用于增量)
+      - name: "themes"          # 主题标签 (数组: ["超标排放", "危险废物"])
+      - name: "obligations"     # 义务主体 (数组: ["企业", "政府"])
+      - name: "penalty"         # 处罚摘要 (自由文本, 详细见 Penalty 节点)
+    examples: ["环境保护法 第六条"]
+
+  Pollutant:
+    desc: "污染物 (核心语义节点)"
+    properties:
+      - name: "poll_id"
+      - name: "name_zh"         # "二氧化硫"
+      - name: "name_en"         # "SO2"
+      - name: "alias"           # 别名 (数组)
+      - name: "category"        # 大气/水/土壤/固废/噪声/放射性
+      - name: "hazard"          # 危害描述
+      - name: "cas_number"      # CAS 编号 (如有)
+    examples: ["SO2", "NOx", "PM2.5", "PM10", "VOCs", "COD", "氨氮", "总磷", "危险废物"]
+
+  PollutionSource:
+    desc: "污染源"
+    properties:
+      - name: "src_id"
+      - name: "name_zh"         # "工业排放"
+      - name: "category"        # 工业/移动/农业/生活/扬尘
+      - name: "typical_pollutants"   # 排放哪些污染物
+    examples: ["燃煤电厂", "机动车尾气", "建筑扬尘", "畜禽养殖"]
+
+  Industry:
+    desc: "行业 (用于执法对象的精细化)"
+    properties:
+      - name: "ind_id"
+      - name: "name_zh"
+      - name: "category"        # 重污染/一般/清洁
+      - name: "main_pollutants"
+      - name: "applicable_standards"  # 适用标准 (数组)
+    examples: ["钢铁", "化工", "印染", "造纸", "火电", "水泥", "制药"]
+
+  TreatmentTech:
+    desc: "治理技术 / 末端处理技术"
+    properties:
+      - name: "tech_id"
+      - name: "name_zh"         # "脱硫脱硝"
+      - name: "category"        # 物理/化学/生物
+      - name: "target_pollutants"
+      - name: "applicable_industries"
+    examples: ["SCR 脱硝", "湿法脱硫", "活性炭吸附", "MBR 膜生物反应器"]
+
+  Region:
+    desc: "行政区域"
+    properties:
+      - name: "region_id"
+      - name: "name_zh"
+      - name: "level"           # 国家/省/市/县
+      - name: "parent_region"
+    examples: ["河北省", "石家庄市", "雄安新区"]
+
+  Organization:
+    desc: "颁布/执法/监管机构"
+    properties:
+      - name: "org_id"
+      - name: "name_zh"
+      - name: "level"
+      - name: "category"        # 立法/执法/监测
+    examples: ["全国人民代表大会", "生态环境部", "河北省生态环境厅"]
+
+  # ===== 动态层 (案例 / 违法 / 处罚) =====
+  Case:
+    desc: "执法案例 (从'现有系统案例库'/'督察管理'抽取)"
+    properties:
+      - name: "case_id"
+      - name: "title"
+      - name: "case_type"       # 危险废物/大气/水/...
+      - name: "case_time"
+      - name: "region"
+      - name: "enterprise"      # 涉案企业 (脱敏)
+      - name: "violations"      # 违反条款
+      - name: "penalties"       # 处罚措施
+      - name: "investigation_sop"  # 核查 SOP 流程 (从执法小结抽取)
+      - name: "summary"
+      - name: "source"
+    examples: ["天水市秦安县谢某非法收集贮存废机油案"]
+
+  Violation:
+    desc: "具体违法行为 (可复用的标准化违法类型)"
+    properties:
+      - name: "vio_id"
+      - name: "name_zh"
+      - name: "category"
+      - name: "violated_articles"   # 违反的条款
+    examples: ["无证收集危险废物", "超标排放", "伪造监测数据", "未批先建"]
+
+  Penalty:
+    desc: "处罚措施"
+    properties:
+      - name: "pen_id"
+      - name: "name_zh"         # "罚款十万元"
+      - name: "type"            # 罚款/拘留/停产/吊销许可证
+      - name: "amount"
+      - name: "duration"
+    examples: ["行政拘留 10-15 日", "处十万元以上一百万元以下罚款"]
+
+  Enterprise:
+    desc: "违法/被监管企业 (脱敏)"
+    properties:
+      - name: "ent_id"
+      - name: "name_anonymous"  # 脱敏代号
+      - name: "industry"
+      - name: "region"
+      - name: "violation_history"
+
+  # ===== 元数据层 =====
+  Interpretation:
+    desc: "标准解读 / 条文释义"
+    properties:
+      - name: "interp_id"
+      - name: "target_doc"
+      - name: "content"
+      - name: "issuing_body"
+
+  Notice:
+    desc: "公告 / 通知 / 政策文件 (如标准发布通知)"
+    properties:
+      - name: "notice_id"
+      - name: "title"
+      - name: "issuing_body"
+      - name: "effective_date"
+
+  Chunk:
+    desc: "文档分块 (向量化基础单位, 保留溯源)"
+    properties:
+      - name: "chunk_id"
+      - name: "doc_id"
+      - name: "span_start"
+      - name: "span_end"
+      - name: "text"
+      - name: "embedding"       # 1024 维向量 (BGE)
+      - name: "themes"
+
+# -----------------------------------------------------------------------------
+# 关系类型 (Relationship Types)
+# -----------------------------------------------------------------------------
+relationship_types:
+
+  # 法规/标准 - 基础元关系
+  ISSUED_BY:
+    desc: "由某机构颁布"
+    from: ["Law", "Regulation", "Standard", "Interpretation", "Notice"]
+    to: ["Organization"]
+
+  APPLIES_TO_REGION:
+    desc: "适用于某地区"
+    from: ["Law", "Regulation", "Standard"]
+    to: ["Region"]
+
+  APPLIES_TO_INDUSTRY:
+    desc: "适用于某行业"
+    from: ["Standard", "Regulation", "Article"]
+    to: ["Industry"]
+
+  EFFECTIVE_ON:
+    desc: "生效日期"
+    from: ["Law", "Regulation", "Standard"]
+    to: []  # 标注为日期属性, 此处保留为关系占位
+
+  SUPERSEDES:
+    desc: "替代某旧法规/标准"
+    from: ["Law", "Regulation", "Standard"]
+    to: ["Law", "Regulation", "Standard"]
+    properties: ["effective_date"]
+
+  AMENDS:
+    desc: "修订 (部分修改, 非整体替代)"
+    from: ["Law", "Regulation", "Standard"]
+    to: ["Law", "Regulation", "Standard"]
+
+  REFERENCES:
+    desc: "引用 (上位法依据)"
+    from: ["Law", "Regulation", "Standard", "Article"]
+    to: ["Law", "Regulation", "Article"]
+
+  # 法规内部
+  CONTAINS_ARTICLE:
+    desc: "法规包含条款"
+    from: ["Law", "Regulation", "Standard"]
+    to: ["Article"]
+
+  ARTICLE_REGULATES:
+    desc: "条款约束/管控某对象"
+    from: ["Article"]
+    to: ["Pollutant", "PollutionSource", "Industry", "Enterprise"]
+
+  ARTICLE_DEFINES_PENALTY:
+    desc: "条款规定某处罚"
+    from: ["Article"]
+    to: ["Penalty"]
+
+  ARTICLE_DEFINES_VIOLATION:
+    desc: "条款定义某违法行为"
+    from: ["Article"]
+    to: ["Violation"]
+
+  # 污染物 / 源 / 行业 / 技术
+  SOURCE_EMITS_POLLUTANT:
+    desc: "某污染源排放某污染物"
+    from: ["PollutionSource", "Industry"]
+    to: ["Pollutant"]
+    properties: ["emission_factor"]
+
+  INDUSTRY_USES_TECH:
+    desc: "某行业使用某治理技术"
+    from: ["Industry"]
+    to: ["TreatmentTech"]
+
+  TECH_TREATS_POLLUTANT:
+    desc: "某技术处理某污染物"
+    from: ["TreatmentTech"]
+    to: ["Pollutant"]
+    properties: ["removal_rate"]
+
+  STANDARD_LIMITS_POLLUTANT:
+    desc: "标准对某污染物设定限值"
+    from: ["Standard", "Article"]
+    to: ["Pollutant"]
+    properties: ["limit_value", "limit_unit", "scenario"]
+
+  # 案例 / 违法 / 处罚
+  CASE_VIOLATES_ARTICLE:
+    desc: "案例违反了某条款"
+    from: ["Case"]
+    to: ["Article"]
+
+  CASE_INVOLVES_VIOLATION:
+    desc: "案例涉及某违法行为"
+    from: ["Case"]
+    to: ["Violation"]
+
+  CASE_AT_REGION:
+    desc: "案例发生地"
+    from: ["Case"]
+    to: ["Region"]
+
+  CASE_AT_ENTERPRISE:
+    desc: "案例涉案企业"
+    from: ["Case"]
+    to: ["Enterprise"]
+
+  CASE_TRIGGERS_PENALTY:
+    desc: "案例触发某处罚"
+    from: ["Case"]
+    to: ["Penalty"]
+
+  SIMILAR_TO:
+    desc: "案例间相似 (推荐用)"
+    from: ["Case"]
+    to: ["Case"]
+    properties: ["similarity_score", "basis"]
+
+  # 释义 / 公告
+  INTERPRETS:
+    desc: "释义某法规/条款"
+    from: ["Interpretation"]
+    to: ["Law", "Regulation", "Article"]
+
+  # 通用
+  MENTIONED_IN_CHUNK:
+    desc: "在某 chunk 中被提到 (反范式, 用于反查溯源)"
+    from: ["Law", "Regulation", "Article", "Pollutant", "Industry", "Case"]
+    to: ["Chunk"]
+    properties: ["weight"]
+
+  RELATED_TO:
+    desc: "通用关联 (兜底, 应少用)"
+    from: ["ANY"]
+    to: ["ANY"]
+    properties: ["basis"]
+
+# -----------------------------------------------------------------------------
+# 实体归一化字典 (Normalization Dictionary)
+# 在抽取前/后使用, 控制实体合并
+# -----------------------------------------------------------------------------
+entity_normalization:
+
+  Pollutant:
+    "二氧化硫": "SO2"
+    "SO₂": "SO2"
+    "sulfur dioxide": "SO2"
+    "氮氧化物": "NOx"
+    "NOX": "NOx"
+    "氮氧化合物": "NOx"
+    "细颗粒物": "PM2.5"
+    "PM₂.₅": "PM2.5"
+    "可吸入颗粒物": "PM10"
+    "挥发性有机物": "VOCs"
+    "VOC": "VOCs"
+    "化学需氧量": "COD"
+    "生化需氧量": "BOD"
+    "危险废物": "HW"  # 危险废物类别
+    "危废": "HW"
+
+  Industry:
+    "钢铁企业": "钢铁"
+    "钢铁行业": "钢铁"
+    "化工企业": "化工"
+    "火电厂": "火电"
+    "火力发电": "火电"
+
+# -----------------------------------------------------------------------------
+# 抽取 Schema (LLM 输出格式约束)
+# -----------------------------------------------------------------------------
+extraction_schema:
+
+  max_articles_per_chunk: 50
+  max_entities_per_chunk: 100
+  max_relationships_per_chunk: 200
+
+  field_constraints:
+    Article.article_no: "匹配 ^第[一二三四五六七八九十百千零〇0-9]+条(第[一二三四五六七八九十百千零〇0-9]+款)?$"
+    Pollutant.name_zh: "长度 1-20 字"
+    Case.case_time: "ISO 8601 格式"
+
+  forbidden_actions:
+    - "禁止臆造条款号"
+    - "禁止在污染物质名前加'等'/'各种'"
+    - "禁止合并多个案例"

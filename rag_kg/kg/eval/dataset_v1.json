@@ -1,0 +1,802 @@
+[
+  {
+    "id": "qa-001",
+    "type": "law_article",
+    "difficulty": "easy",
+    "question": "中华人民共和国水污染防治法的颁布机构是哪个？",
+    "expected_answer_keywords": ["全国人民代表大会常务委员会"],
+    "expected_evidence": ["Law", "Organization"]
+  },
+  {
+    "id": "qa-002",
+    "type": "law_article",
+    "difficulty": "easy",
+    "question": "大气污染防治法的立法目的是什么？",
+    "expected_answer_keywords": ["保护和改善环境", "防治大气污染", "保障公众健康"],
+    "expected_evidence": ["Law", "Article"]
+  },
+  {
+    "id": "qa-003",
+    "type": "law_article",
+    "difficulty": "medium",
+    "question": "危险废物经营许可证的申请条件是什么？",
+    "expected_answer_keywords": ["有相应的专业技术人员", "有符合要求的设施", "有健全的环境保护管理制度"],
+    "expected_evidence": ["Law", "Regulation", "Article"]
+  },
+  {
+    "id": "qa-004",
+    "type": "law_article",
+    "difficulty": "medium",
+    "question": "超标排放大气污染物的处罚措施有哪些？",
+    "expected_answer_keywords": ["罚款", "停产整治", "按日连续处罚"],
+    "expected_evidence": ["Law", "Penalty", "Article"]
+  },
+  {
+    "id": "qa-005",
+    "type": "law_article",
+    "difficulty": "hard",
+    "question": "未批先建的环境影响评价法律责任是什么？",
+    "expected_answer_keywords": ["责令停止建设", "罚款", "恢复原状"],
+    "expected_evidence": ["Law", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-006",
+    "type": "standard_limit",
+    "difficulty": "easy",
+    "question": "GB 3095-2012 环境空气质量标准中 PM2.5 的年均浓度限值是多少？",
+    "expected_answer_keywords": ["35", "μg/m³", "PM2.5"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-007",
+    "type": "standard_limit",
+    "difficulty": "easy",
+    "question": "地表水环境质量标准 GB 3838-2002 中 COD 的标准限值是多少？",
+    "expected_answer_keywords": ["COD", "mg/L", "III类", "20"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-008",
+    "type": "standard_limit",
+    "difficulty": "medium",
+    "question": "污水综合排放标准 GB 8978-1996 中氨氮的最高允许排放浓度？",
+    "expected_answer_keywords": ["氨氮", "mg/L"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-009",
+    "type": "standard_limit",
+    "difficulty": "medium",
+    "question": "工业炉窑大气污染物排放标准是什么？",
+    "expected_answer_keywords": ["GB 9078", "烟尘", "SO2"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-010",
+    "type": "standard_limit",
+    "difficulty": "hard",
+    "question": "危险废物焚烧污染控制标准的二噁英排放限值是多少？",
+    "expected_answer_keywords": ["GB 18484", "二噁英", "ng-TEQ/m³", "0.5"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-011",
+    "type": "industry_compliance",
+    "difficulty": "easy",
+    "question": "钢铁工业适用的主要排放标准是什么？",
+    "expected_answer_keywords": ["GB 28662", "钢铁", "烧结", "炼铁"],
+    "expected_evidence": ["Standard", "Industry"]
+  },
+  {
+    "id": "qa-012",
+    "type": "industry_compliance",
+    "difficulty": "easy",
+    "question": "火电厂大气污染物排放适用什么标准？",
+    "expected_answer_keywords": ["GB 13223", "火电", "燃煤", "SO2", "NOx"],
+    "expected_evidence": ["Standard", "Industry", "Pollutant"]
+  },
+  {
+    "id": "qa-013",
+    "type": "industry_compliance",
+    "difficulty": "medium",
+    "question": "化工行业废水排放执行什么标准？",
+    "expected_answer_keywords": ["GB 8978", "化工", "废水"],
+    "expected_evidence": ["Standard", "Industry", "Pollutant"]
+  },
+  {
+    "id": "qa-014",
+    "type": "industry_compliance",
+    "difficulty": "medium",
+    "question": "水泥行业大气污染物排放限值标准？",
+    "expected_answer_keywords": ["GB 4915", "水泥", "颗粒物", "NOx"],
+    "expected_evidence": ["Standard", "Industry", "Pollutant"]
+  },
+  {
+    "id": "qa-015",
+    "type": "industry_compliance",
+    "difficulty": "hard",
+    "question": "印染行业适用的国家排放标准？",
+    "expected_answer_keywords": ["GB 4287", "印染", "纺织", "COD", "色度"],
+    "expected_evidence": ["Standard", "Industry", "Pollutant"]
+  },
+  {
+    "id": "qa-016",
+    "type": "case_recommend",
+    "difficulty": "medium",
+    "question": "类似未批先建被处罚的案例有哪些？",
+    "expected_answer_keywords": ["未批先建", "环评", "罚款"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-017",
+    "type": "case_recommend",
+    "difficulty": "medium",
+    "question": "类似监测数据造假的处罚案例？",
+    "expected_answer_keywords": ["监测数据", "造假", "篡改", "罚款", "拘留"],
+    "expected_evidence": ["Case", "Violation", "Penalty", "Article"]
+  },
+  {
+    "id": "qa-018",
+    "type": "case_recommend",
+    "difficulty": "hard",
+    "question": "非法收集危险废物的典型案例？",
+    "expected_answer_keywords": ["危险废物", "非法收集", "HW", "无证经营"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-019",
+    "type": "case_recommend",
+    "difficulty": "hard",
+    "question": "夜间偷排废水被查处的案例？",
+    "expected_answer_keywords": ["偷排", "暗管", "夜间", "废水"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-020",
+    "type": "case_recommend",
+    "difficulty": "hard",
+    "question": "污水处理厂出水超标案例？",
+    "expected_answer_keywords": ["污水处理厂", "超标", "出水", "罚款"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-021",
+    "type": "law_article",
+    "difficulty": "easy",
+    "question": "中华人民共和国环境保护法的立法目的是什么？",
+    "expected_answer_keywords": ["保护和改善环境", "防治污染", "保障公众健康", "推进生态文明建设"],
+    "expected_evidence": ["Law", "Article"]
+  },
+  {
+    "id": "qa-022",
+    "type": "law_article",
+    "difficulty": "medium",
+    "question": "建设项目环境影响评价的审批程序是什么？",
+    "expected_answer_keywords": ["环评文件", "审批", "公示", "报告书"],
+    "expected_evidence": ["Law", "Regulation", "Article"]
+  },
+  {
+    "id": "qa-023",
+    "type": "law_article",
+    "difficulty": "medium",
+    "question": "排污许可证的申请与核发规定是什么？",
+    "expected_answer_keywords": ["排污许可证", "申请", "核发", "登记"],
+    "expected_evidence": ["Regulation", "Article"]
+  },
+  {
+    "id": "qa-024",
+    "type": "law_article",
+    "difficulty": "hard",
+    "question": "突发环境事件应急处置的法律责任？",
+    "expected_answer_keywords": ["应急预案", "应急处置", "罚款", "刑事责任"],
+    "expected_evidence": ["Law", "Article", "Penalty"]
+  },
+  {
+    "id": "qa-025",
+    "type": "law_article",
+    "difficulty": "hard",
+    "question": "按日连续处罚的适用条件是什么？",
+    "expected_answer_keywords": ["按日连续处罚", "拒不改正", "违法排污"],
+    "expected_evidence": ["Law", "Article", "Penalty"]
+  },
+  {
+    "id": "qa-026",
+    "type": "standard_limit",
+    "difficulty": "easy",
+    "question": "锅炉大气污染物排放标准 GB 13271 的颗粒物限值？",
+    "expected_answer_keywords": ["GB 13271", "锅炉", "颗粒物", "烟尘"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-027",
+    "type": "standard_limit",
+    "difficulty": "medium",
+    "question": "恶臭污染物排放标准 GB 14554 的氨排放限值？",
+    "expected_answer_keywords": ["GB 14554", "恶臭", "氨", "mg/m³"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-028",
+    "type": "standard_limit",
+    "difficulty": "medium",
+    "question": "饮食业油烟排放标准是什么？",
+    "expected_answer_keywords": ["GB 18483", "饮食业", "油烟", "mg/m³"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-029",
+    "type": "standard_limit",
+    "difficulty": "hard",
+    "question": "医疗废物焚烧污染控制标准的烟气黑度限值？",
+    "expected_answer_keywords": ["GB 19218", "医疗废物", "林格曼", "黑度"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-030",
+    "type": "standard_limit",
+    "difficulty": "hard",
+    "question": "生活垃圾焚烧污染控制标准的颗粒物排放限值？",
+    "expected_answer_keywords": ["GB 18485", "生活垃圾", "颗粒物", "mg/m³"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-031",
+    "type": "industry_compliance",
+    "difficulty": "easy",
+    "question": "造纸工业水污染物排放标准？",
+    "expected_answer_keywords": ["GB 3544", "造纸", "废水", "COD"],
+    "expected_evidence": ["Standard", "Industry"]
+  },
+  {
+    "id": "qa-032",
+    "type": "industry_compliance",
+    "difficulty": "medium",
+    "question": "制药工业大气污染物排放标准？",
+    "expected_answer_keywords": ["GB 37823", "制药", "VOCs"],
+    "expected_evidence": ["Standard", "Industry", "Pollutant"]
+  },
+  {
+    "id": "qa-033",
+    "type": "industry_compliance",
+    "difficulty": "medium",
+    "question": "炼焦化学工业适用的排放标准？",
+    "expected_answer_keywords": ["GB 16171", "炼焦", "焦化", "烟尘"],
+    "expected_evidence": ["Standard", "Industry"]
+  },
+  {
+    "id": "qa-034",
+    "type": "industry_compliance",
+    "difficulty": "hard",
+    "question": "电池工业污染物排放标准？",
+    "expected_answer_keywords": ["GB 30484", "电池", "重金属", "铅"],
+    "expected_evidence": ["Standard", "Industry", "Pollutant"]
+  },
+  {
+    "id": "qa-035",
+    "type": "industry_compliance",
+    "difficulty": "hard",
+    "question": "电镀污染物排放标准的重金属限值？",
+    "expected_answer_keywords": ["GB 21900", "电镀", "重金属", "总铬"],
+    "expected_evidence": ["Standard", "Industry", "Pollutant"]
+  },
+  {
+    "id": "qa-036",
+    "type": "case_recommend",
+    "difficulty": "medium",
+    "question": "VOCs 排放超标被处罚的案例？",
+    "expected_answer_keywords": ["VOCs", "超标", "罚款"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-037",
+    "type": "case_recommend",
+    "difficulty": "medium",
+    "question": "污水处理厂污泥违规处置案例？",
+    "expected_answer_keywords": ["污泥", "处置", "违规"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-038",
+    "type": "case_recommend",
+    "difficulty": "hard",
+    "question": "伪造在线监测数据被追究刑事责任案例？",
+    "expected_answer_keywords": ["在线监测", "伪造", "刑事责任", "污染罪"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-039",
+    "type": "case_recommend",
+    "difficulty": "hard",
+    "question": "未取得排污许可证排放污染物的案例？",
+    "expected_answer_keywords": ["无证排污", "排污许可证", "罚款"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-040",
+    "type": "case_recommend",
+    "difficulty": "hard",
+    "question": "跨省倾倒危险废物被处罚的案例？",
+    "expected_answer_keywords": ["跨省", "危险废物", "倾倒", "处罚"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-041",
+    "type": "process_sop",
+    "difficulty": "medium",
+    "question": "污染源监察的核查流程是什么？",
+    "expected_answer_keywords": ["现场检查", "调取数据", "询问", "采样"],
+    "expected_evidence": ["Law", "Regulation", "Article"]
+  },
+  {
+    "id": "qa-042",
+    "type": "process_sop",
+    "difficulty": "medium",
+    "question": "环境违法案件立案调查的标准流程？",
+    "expected_answer_keywords": ["立案", "调查", "取证", "告知", "处罚"],
+    "expected_evidence": ["Law", "Regulation"]
+  },
+  {
+    "id": "qa-043",
+    "type": "process_sop",
+    "difficulty": "hard",
+    "question": "突发环境事件分级响应程序？",
+    "expected_answer_keywords": ["特别重大", "重大", "较大", "一般", "响应"],
+    "expected_evidence": ["Law", "Regulation"]
+  },
+  {
+    "id": "qa-044",
+    "type": "process_sop",
+    "difficulty": "hard",
+    "question": "环保督察整改验收流程？",
+    "expected_answer_keywords": ["督察", "整改", "验收", "销号"],
+    "expected_evidence": ["Regulation", "Article"]
+  },
+  {
+    "id": "qa-045",
+    "type": "process_sop",
+    "difficulty": "hard",
+    "question": "生态环境损害赔偿磋商程序？",
+    "expected_answer_keywords": ["生态环境损害", "赔偿", "磋商", "诉讼"],
+    "expected_evidence": ["Law", "Regulation", "Article"]
+  },
+  {
+    "id": "qa-046",
+    "type": "law_article",
+    "difficulty": "easy",
+    "question": "中华人民共和国固体废物污染环境防治法的颁布机构？",
+    "expected_answer_keywords": ["全国人民代表大会常务委员会"],
+    "expected_evidence": ["Law", "Organization"]
+  },
+  {
+    "id": "qa-047",
+    "type": "law_article",
+    "difficulty": "medium",
+    "question": "噪声污染防治法的适用范围是什么？",
+    "expected_answer_keywords": ["工业噪声", "建筑施工噪声", "交通运输噪声", "社会生活噪声"],
+    "expected_evidence": ["Law", "Article"]
+  },
+  {
+    "id": "qa-048",
+    "type": "law_article",
+    "difficulty": "hard",
+    "question": "土壤污染防治法规定的污染责任主体？",
+    "expected_answer_keywords": ["土壤污染责任人", "土地使用权人"],
+    "expected_evidence": ["Law", "Article", "Violation"]
+  },
+  {
+    "id": "qa-049",
+    "type": "standard_limit",
+    "difficulty": "medium",
+    "question": "环境空气质量指数 AQI 计算的污染物？",
+    "expected_answer_keywords": ["PM2.5", "PM10", "SO2", "NO2", "O3", "CO"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-050",
+    "type": "industry_compliance",
+    "difficulty": "hard",
+    "question": "畜禽养殖业适用的排放标准？",
+    "expected_answer_keywords": ["GB 18596", "畜禽养殖", "COD", "氨氮"],
+    "expected_evidence": ["Standard", "Industry"]
+  },
+  {
+    "id": "qa-051",
+    "type": "law_article",
+    "difficulty": "easy",
+    "question": "海洋环境保护法的适用范围包括哪些？",
+    "expected_answer_keywords": ["海洋环境", "内水", "领海", "毗连区"],
+    "expected_evidence": ["Law", "Article"]
+  },
+  {
+    "id": "qa-052",
+    "type": "law_article",
+    "difficulty": "easy",
+    "question": "放射性污染防治法的监督管理部门？",
+    "expected_answer_keywords": ["生态环境部", "国务院生态环境主管部门"],
+    "expected_evidence": ["Law", "Organization"]
+  },
+  {
+    "id": "qa-053",
+    "type": "law_article",
+    "difficulty": "medium",
+    "question": "建设项目竣工环保验收的法律依据？",
+    "expected_answer_keywords": ["竣工环保验收", "环评", "批复", "三同时"],
+    "expected_evidence": ["Law", "Regulation", "Article"]
+  },
+  {
+    "id": "qa-054",
+    "type": "law_article",
+    "difficulty": "medium",
+    "question": "逃避监管方式排放污染物的法律后果？",
+    "expected_answer_keywords": ["逃避监管", "暗管", "渗井", "篡改", "拘留"],
+    "expected_evidence": ["Law", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-055",
+    "type": "law_article",
+    "difficulty": "hard",
+    "question": "企业事业单位环境信息公开的法律要求？",
+    "expected_answer_keywords": ["环境信息", "公开", "重点排污单位", "污染物"],
+    "expected_evidence": ["Law", "Article"]
+  },
+  {
+    "id": "qa-056",
+    "type": "law_article",
+    "difficulty": "hard",
+    "question": "环境公益诉讼的起诉条件是什么？",
+    "expected_answer_keywords": ["环境公益诉讼", "社会组织", "连续", "专门从事"],
+    "expected_evidence": ["Law", "Article"]
+  },
+  {
+    "id": "qa-057",
+    "type": "law_article",
+    "difficulty": "medium",
+    "question": "排污许可管理条例的实施时间？",
+    "expected_answer_keywords": ["排污许可管理条例", "2021"],
+    "expected_evidence": ["Regulation", "Article"]
+  },
+  {
+    "id": "qa-058",
+    "type": "law_article",
+    "difficulty": "easy",
+    "question": "清洁生产促进法的核心目的是什么？",
+    "expected_answer_keywords": ["清洁生产", "节能降耗", "减少污染"],
+    "expected_evidence": ["Law", "Article"]
+  },
+  {
+    "id": "qa-059",
+    "type": "law_article",
+    "difficulty": "medium",
+    "question": "环境影响评价法中公众参与的规定？",
+    "expected_answer_keywords": ["公众参与", "征求意见", "公示", "听证"],
+    "expected_evidence": ["Law", "Article"]
+  },
+  {
+    "id": "qa-060",
+    "type": "law_article",
+    "difficulty": "hard",
+    "question": "污染环境罪的入罪标准是什么？",
+    "expected_answer_keywords": ["污染环境罪", "严重污染环境", "有毒物质", "三年以下"],
+    "expected_evidence": ["Law", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-061",
+    "type": "standard_limit",
+    "difficulty": "easy",
+    "question": "声环境质量标准 GB 3096 的各类声环境功能区？",
+    "expected_answer_keywords": ["GB 3096", "声环境", "功能区", "0类", "1类"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-062",
+    "type": "standard_limit",
+    "difficulty": "easy",
+    "question": "地下水质量标准 GB/T 14848 的质量分类？",
+    "expected_answer_keywords": ["GB/T 14848", "地下水", "I类", "V类"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-063",
+    "type": "standard_limit",
+    "difficulty": "medium",
+    "question": "铅锌工业污染物排放标准的铅排放限值？",
+    "expected_answer_keywords": ["铅锌", "GB 25466", "铅", "mg/L"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-064",
+    "type": "standard_limit",
+    "difficulty": "medium",
+    "question": "铝工业污染物排放标准的氟化物限值？",
+    "expected_answer_keywords": ["铝工业", "GB 25465", "氟化物"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-065",
+    "type": "standard_limit",
+    "difficulty": "hard",
+    "question": "挥发性有机物无组织排放控制标准的监测要求？",
+    "expected_answer_keywords": ["VOCs", "GB 37822", "无组织", "厂界"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-066",
+    "type": "standard_limit",
+    "difficulty": "hard",
+    "question": "煤炭工业污染物排放标准的主要控制指标？",
+    "expected_answer_keywords": ["煤炭", "GB 20426", "颗粒物", "SO2"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-067",
+    "type": "standard_limit",
+    "difficulty": "medium",
+    "question": "陶瓷工业污染物排放标准的颗粒物限值？",
+    "expected_answer_keywords": ["陶瓷", "GB 25464", "颗粒物", "mg/m³"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-068",
+    "type": "standard_limit",
+    "difficulty": "easy",
+    "question": "土壤环境质量 建设用地土壤污染风险管控标准的标准号？",
+    "expected_answer_keywords": ["GB 36600", "建设用地", "土壤"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-069",
+    "type": "standard_limit",
+    "difficulty": "medium",
+    "question": "合成树脂工业污染物排放标准的特征污染物？",
+    "expected_answer_keywords": ["合成树脂", "GB 31572", "VOCs", "颗粒物"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-070",
+    "type": "standard_limit",
+    "difficulty": "hard",
+    "question": "石油炼制工业污染物排放标准的废水控制项目？",
+    "expected_answer_keywords": ["石油炼制", "GB 31570", "COD", "石油类", "氨氮"],
+    "expected_evidence": ["Standard", "Pollutant"]
+  },
+  {
+    "id": "qa-071",
+    "type": "industry_compliance",
+    "difficulty": "easy",
+    "question": "有色金属冶炼行业适用的排放标准？",
+    "expected_answer_keywords": ["有色金属", "GB 25467", "冶炼"],
+    "expected_evidence": ["Standard", "Industry"]
+  },
+  {
+    "id": "qa-072",
+    "type": "industry_compliance",
+    "difficulty": "easy",
+    "question": "石油化学工业适用的排放标准？",
+    "expected_answer_keywords": ["石油化学", "GB 31571", "VOCs"],
+    "expected_evidence": ["Standard", "Industry"]
+  },
+  {
+    "id": "qa-073",
+    "type": "industry_compliance",
+    "difficulty": "medium",
+    "question": "橡胶制品工业污染物排放标准？",
+    "expected_answer_keywords": ["橡胶", "GB 27632", "VOCs", "颗粒物"],
+    "expected_evidence": ["Standard", "Industry", "Pollutant"]
+  },
+  {
+    "id": "qa-074",
+    "type": "industry_compliance",
+    "difficulty": "medium",
+    "question": "农药制造工业污染物排放标准？",
+    "expected_answer_keywords": ["农药", "GB 21523", "COD", "特征污染物"],
+    "expected_evidence": ["Standard", "Industry", "Pollutant"]
+  },
+  {
+    "id": "qa-075",
+    "type": "industry_compliance",
+    "difficulty": "hard",
+    "question": "无机化学工业污染物排放标准的重金属限值？",
+    "expected_answer_keywords": ["无机化学", "GB 31573", "重金属", "砷", "铅"],
+    "expected_evidence": ["Standard", "Industry", "Pollutant"]
+  },
+  {
+    "id": "qa-076",
+    "type": "industry_compliance",
+    "difficulty": "hard",
+    "question": "制革及毛皮加工工业水污染物排放标准？",
+    "expected_answer_keywords": ["制革", "毛皮", "GB 30486", "COD", "铬"],
+    "expected_evidence": ["Standard", "Industry", "Pollutant"]
+  },
+  {
+    "id": "qa-077",
+    "type": "industry_compliance",
+    "difficulty": "medium",
+    "question": "玻璃工业大气污染物排放标准？",
+    "expected_answer_keywords": ["玻璃", "GB 26453", "颗粒物", "NOx"],
+    "expected_evidence": ["Standard", "Industry"]
+  },
+  {
+    "id": "qa-078",
+    "type": "industry_compliance",
+    "difficulty": "easy",
+    "question": "砖瓦工业大气污染物排放标准？",
+    "expected_answer_keywords": ["砖瓦", "GB 29620", "颗粒物", "SO2"],
+    "expected_evidence": ["Standard", "Industry"]
+  },
+  {
+    "id": "qa-079",
+    "type": "industry_compliance",
+    "difficulty": "medium",
+    "question": "铁矿采选工业污染物排放标准？",
+    "expected_answer_keywords": ["铁矿", "采选", "GB 28661", "悬浮物"],
+    "expected_evidence": ["Standard", "Industry"]
+  },
+  {
+    "id": "qa-080",
+    "type": "industry_compliance",
+    "difficulty": "hard",
+    "question": "钒工业污染物排放标准的特征污染物？",
+    "expected_answer_keywords": ["钒", "GB 26452", "V2O5", "钒渣"],
+    "expected_evidence": ["Standard", "Industry"]
+  },
+  {
+    "id": "qa-081",
+    "type": "case_recommend",
+    "difficulty": "medium",
+    "question": "超标排放 SO2 被按日连续处罚的案例？",
+    "expected_answer_keywords": ["SO2", "超标", "按日连续处罚"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-082",
+    "type": "case_recommend",
+    "difficulty": "medium",
+    "question": "非法排放重金属废水被查处的案例？",
+    "expected_answer_keywords": ["重金属", "废水", "非法排放"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-083",
+    "type": "case_recommend",
+    "difficulty": "hard",
+    "question": "非法排放倾倒处置危险废物涉嫌犯罪的案例？",
+    "expected_answer_keywords": ["危险废物", "倾倒", "犯罪", "刑事责任"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-084",
+    "type": "case_recommend",
+    "difficulty": "hard",
+    "question": "企业拒不执行停产整治被查封扣押的案例？",
+    "expected_answer_keywords": ["拒不执行", "停产整治", "查封扣押"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-085",
+    "type": "case_recommend",
+    "difficulty": "hard",
+    "question": "环评造假被追究法律责任的案例？",
+    "expected_answer_keywords": ["环评", "造假", "弄虚作假", "法律责任"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-086",
+    "type": "case_recommend",
+    "difficulty": "medium",
+    "question": "工地夜间施工噪声超标被投诉处罚的案例？",
+    "expected_answer_keywords": ["夜间施工", "噪声", "超标", "投诉"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-087",
+    "type": "case_recommend",
+    "difficulty": "medium",
+    "question": "露天焚烧秸秆被处罚的案例？",
+    "expected_answer_keywords": ["露天焚烧", "秸秆", "大气污染"],
+    "expected_evidence": ["Case", "Violation"]
+  },
+  {
+    "id": "qa-088",
+    "type": "case_recommend",
+    "difficulty": "hard",
+    "question": "饮用水水源保护区违规建设的案例？",
+    "expected_answer_keywords": ["饮用水水源", "保护区", "违规建设"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-089",
+    "type": "case_recommend",
+    "difficulty": "medium",
+    "question": "超标排放 NOx 被行政处罚的案例？",
+    "expected_answer_keywords": ["NOx", "超标", "行政处罚"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-090",
+    "type": "case_recommend",
+    "difficulty": "hard",
+    "question": "通过渗坑排放有毒物质被追究污染环境罪的案例？",
+    "expected_answer_keywords": ["渗坑", "有毒物质", "污染环境罪"],
+    "expected_evidence": ["Case", "Violation", "Penalty"]
+  },
+  {
+    "id": "qa-091",
+    "type": "process_sop",
+    "difficulty": "easy",
+    "question": "企业如何申请排污许可证？",
+    "expected_answer_keywords": ["排污许可证", "申请", "提交材料", "审批"],
+    "expected_evidence": ["Regulation", "Article"]
+  },
+  {
+    "id": "qa-092",
+    "type": "process_sop",
+    "difficulty": "easy",
+    "question": "环境影响评价报告书的编制要求？",
+    "expected_answer_keywords": ["环境影响评价", "报告书", "编制", "技术导则"],
+    "expected_evidence": ["Law", "Regulation", "Article"]
+  },
+  {
+    "id": "qa-093",
+    "type": "process_sop",
+    "difficulty": "medium",
+    "question": "环境行政处罚听证程序？",
+    "expected_answer_keywords": ["听证", "告知", "申请", "组织"],
+    "expected_evidence": ["Law", "Regulation"]
+  },
+  {
+    "id": "qa-094",
+    "type": "process_sop",
+    "difficulty": "medium",
+    "question": "污染地块风险评估的工作流程？",
+    "expected_answer_keywords": ["风险评估", "污染地块", "采样", "调查"],
+    "expected_evidence": ["Regulation", "Standard"]
+  },
+  {
+    "id": "qa-095",
+    "type": "process_sop",
+    "difficulty": "hard",
+    "question": "排污单位自行监测的技术要求？",
+    "expected_answer_keywords": ["自行监测", "排污单位", "监测方案", "手工监测"],
+    "expected_evidence": ["Regulation", "Standard"]
+  },
+  {
+    "id": "qa-096",
+    "type": "process_sop",
+    "difficulty": "hard",
+    "question": "环境污染责任保险的投保流程？",
+    "expected_answer_keywords": ["环境污染", "责任保险", "投保", "风险评估"],
+    "expected_evidence": ["Regulation", "Article"]
+  },
+  {
+    "id": "qa-097",
+    "type": "process_sop",
+    "difficulty": "medium",
+    "question": "危险废物转移联单的管理规定？",
+    "expected_answer_keywords": ["危险废物", "转移联单", "电子联单", "审批"],
+    "expected_evidence": ["Law", "Regulation", "Article"]
+  },
+  {
+    "id": "qa-098",
+    "type": "process_sop",
+    "difficulty": "easy",
+    "question": "企业突发环境事件应急预案的备案要求？",
+    "expected_answer_keywords": ["应急预案", "备案", "突发环境事件"],
+    "expected_evidence": ["Law", "Regulation"]
+  },
+  {
+    "id": "qa-099",
+    "type": "process_sop",
+    "difficulty": "medium",
+    "question": "生态环境执法现场检查的程序？",
+    "expected_answer_keywords": ["现场检查", "执法", "出示证件", "记录"],
+    "expected_evidence": ["Law", "Regulation"]
+  },
+  {
+    "id": "qa-100",
+    "type": "process_sop",
+    "difficulty": "hard",
+    "question": "环境损害鉴定评估的工作步骤？",
+    "expected_answer_keywords": ["环境损害", "鉴定评估", "确认", "量化", "恢复方案"],
+    "expected_evidence": ["Law", "Regulation", "Article"]
+  }
+]
